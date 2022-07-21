@@ -1,0 +1,30 @@
+.accordionItem{
+    border-bottom: 1px solid var(--gray300);
+}
+
+.accordionTitle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.accordionTitle img{
+    transform: rotate(180deg);
+    transition: var(--transition-short);
+}
+
+.accordionTitle.active img{
+    transform: rotate(0);
+}
+
+.accordionContent{
+    overflow: hidden;
+    max-height: 0;
+    height: 100%;
+    transition: var(--transition-short);
+}
+
+.accordionContent.active{
+    max-height: 500px;
+}

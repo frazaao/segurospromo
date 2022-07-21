@@ -5,6 +5,7 @@ import Coverage from '../components/Coverage'
 import Header from '../components/Header'
 import Hero from '../components/Hero'
 import Plans from '../components/Plans'
+import Reasons from '../components/Reasons'
 
 const Home: NextPage = () => {
   return (
@@ -22,6 +23,7 @@ const Home: NextPage = () => {
       <Hero />
       <Plans />
       <Coverage />
+      <Reasons />
     </>
   )
 }
