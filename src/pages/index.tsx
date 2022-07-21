@@ -1,11 +1,12 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
+import Contact from '../components/Contact'
 import Coverage from '../components/Coverage'
 import Header from '../components/Header'
 import Hero from '../components/Hero'
 import Plans from '../components/Plans'
 import Reasons from '../components/Reasons'
+import TopAdvertisement from '../components/TopAdvertisement'
 
 const Home: NextPage = () => {
   return (
@@ -18,12 +19,13 @@ const Home: NextPage = () => {
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
       {/* <link rel="icon" href="/favicon.ico" /> */}
     </Head>
-
+      <TopAdvertisement />
       <Header />
       <Hero />
       <Plans />
       <Coverage />
       <Reasons />
+      <Contact />
     </>
   )
 }

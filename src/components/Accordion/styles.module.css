@@ -7,6 +7,8 @@
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
+    padding: 1.25rem 0;
+    font: var(--text);
 }
 
 .accordionTitle img{
@@ -22,9 +24,11 @@
     overflow: hidden;
     max-height: 0;
     height: 100%;
+    font: var(--text);
     transition: var(--transition-short);
 }
 
 .accordionContent.active{
     max-height: 500px;
+    padding: 0 1rem 1rem 0;
 }

@@ -2,17 +2,27 @@ import Image from "next/image";
 import styles from "./styles.module.css";
 import Mockup from "../../public/images/Mockup.png";
 import LinkButton from "../LinkButton";
+import { useEffect, useState } from "react";
 
 export default function Plans() {
+
+  const [width, setWidth] = useState(0);
+
+  useEffect(() => {
+      setWidth(window.innerWidth);  
+  },[]);
+
   return (
     <section>
       <div className={styles.container}>
-        <Image
-          className={styles.mockup}
-          src={Mockup}
-          layout="intrinsic"
-          alt="Ilustrações de aplicativos no notebook e no smartphone"
-        />
+        { width > 900 && 
+          <Image
+            className={styles.mockup}
+            src={Mockup}
+            layout="intrinsic"
+            alt="Ilustrações de aplicativos no notebook e no smartphone"
+          /> 
+        }
         <section className={styles.rightSection}>
           <span className={styles.title}>
             Planos personalizados
@@ -30,8 +40,7 @@ export default function Plans() {
             <li>
               <strong>3.</strong>
               <p>
-                Escolha sua forma de pagamento e contrate
-                <br /> 100% online
+                Escolha sua forma de pagamento e contrate 100% online
               </p>
             </li>
           </ul>
@@ -39,6 +48,14 @@ export default function Plans() {
             Pronto! Agora você e sua família têm todos <br /> os benefícios de
             viver com segurança total
           </p>
+          { width < 900 && 
+            <Image
+              className={styles.mockup}
+              src={Mockup}
+              layout="intrinsic"
+              alt="Ilustrações de aplicativos no notebook e no smartphone"
+            /> 
+          }
           <LinkButton href="#">Faça sua cotação</LinkButton>
         </section>
       </div>

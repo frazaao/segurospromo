@@ -45,3 +45,33 @@
     color: var(--green300);
     margin-bottom: 2.5rem;
 }
+
+@media (max-width: 1024px){
+    .container{
+        max-width: 100vw;
+        padding: 0 2rem;
+    }
+
+    .mockup{
+        width: 80%;
+    }
+}
+
+@media (max-width: 900px){
+    .container{
+        flex-direction: column-reverse;
+    }
+
+    .title{
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    .mockup{
+        order: 2;
+    }
+
+    .rightSection{
+        order: 1;
+    }
+}

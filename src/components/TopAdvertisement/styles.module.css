@@ -1,0 +1,20 @@
+.wrapper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+    background: var(--green800);
+    color: var(--white);
+    padding: .5rem 0;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+.wrapper a{
+    color: var(--yellow500);
+    display: flex;
+    align-items: center;
+}

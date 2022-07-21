@@ -3,9 +3,18 @@ import styles from './styles.module.css';
 
 interface Props {
     href: string;
-    children: ReactNode
+    variant?: 'thin' | 'bold';
+    children: ReactNode,
+    className?: string;
 }
 
-export default function LinkButton({ href, children, ...props }: Props){
-    return <a className={styles.linkButton} href={href} { ...props }>{children}</a>
+export default function LinkButton({ href, children, variant = "bold", className, ...props }: Props){
+    return (
+        <a 
+            className={`${styles.linkButton} ${className} ${variant === 'bold' ? styles.fontBold : styles.fontThin}`} 
+            href={href} { ...props }
+        >
+            {children}
+        </a>
+    )
 }

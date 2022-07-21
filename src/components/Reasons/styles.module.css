@@ -4,6 +4,8 @@
 
 .title{
     font: var(--title);
+    margin: 1rem auto 4rem;
+    display: block;
 }
 
 .container{
@@ -12,6 +14,57 @@
     text-align: center;
 }
 
+.content{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10rem;
+    position: relative;
+    margin-bottom: 5rem;
+}
+
+.centerSide{
+    position: absolute;
+    left: 30%;
+    right: 30%;
+    top: 20rem ;
+    display: flex;
+    align-items: flex-end;
+    justify-content:center;
+}
+
 .leftSide{
     text-align: left;
+    flex: 1;
+    padding-right: 4rem;
+}
+
+.rightSide{
+    flex: 1 0 1;
+}
+
+@media (max-width: 1024px){
+    .content{
+        padding: 0 2rem;
+        gap: 3rem;
+    }
+}
+
+@media (max-width:900px){
+    .content{
+        flex-direction: column;
+    }
+
+    .leftSide{
+        padding: 0;
+    }
+
+    .centerSide{
+        position: sticky;
+        margin: 0 auto;
+    }
+
+    .rightSide{
+
+    }
 }

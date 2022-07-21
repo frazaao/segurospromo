@@ -61,3 +61,22 @@
         transform: translateX(0)
     }
 }
+
+@media (max-width: 1024px){
+    .wrapper{
+        padding: 1.5rem .5rem ;
+    }
+
+    .areaCliente{
+        gap: .25rem;
+    }
+
+    .navigation{
+        gap: .5rem;
+    }
+
+    .btnOutline{
+        padding: .5rem;
+        margin-right: -.25rem;
+    }
+}
