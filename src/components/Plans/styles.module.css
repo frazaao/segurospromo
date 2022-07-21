@@ -1,0 +1,47 @@
+.container{
+    max-width: 1200px;
+    margin: 2.5rem auto 7.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.mockup{
+    width: 100%;
+}
+
+.title{
+    font: var(--title);
+    color: var(--gray700);
+    margin-bottom: 1.5rem;
+}
+
+.rightSection{
+    text-align: center;
+}
+
+.rightSection li{
+    font: var(--body);
+    color: var(--gray700);
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: baseline;
+    text-align:left;
+}
+
+.rightSection li:last-child p{
+    align-self: center;
+}
+
+.rightSection li strong{
+    color: var(--green300);
+    font-size: 2.5rem;
+    margin-right: 1.25rem;
+}
+
+.displayText{
+    font: var(--display);
+    color: var(--green300);
+    margin-bottom: 2.5rem;
+}

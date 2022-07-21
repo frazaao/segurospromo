@@ -1,0 +1,37 @@
+.wrapper{
+    width: 100%;
+    position: relative;
+}
+
+.heroContent{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: absolute;
+    inset: 0;
+    padding: 4.5rem 0 5.625rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.heroContent h1{
+    font: var(--font-hero);
+    color: var(--gray700);
+}
+
+.heroDescription p{
+    margin-bottom: 3rem;
+    color: var(--white);
+    font: var(--body);
+}
+
+.whiteFade{
+    position: absolute;
+    z-index: 99999;
+    bottom: 0;
+    width: 100%;
+    transform: rotate(180deg);
+    background: linear-gradient(180deg, #FFFFFF 30.88%, rgba(218, 226, 228, 0) 100%);
+    height: 3rem;
+}

@@ -1,0 +1,32 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 20rem;
+    padding: 1.5rem 1.75rem;
+    border-radius: .5rem;
+
+    background: var(--white);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+    transition: var(--transition-short);
+}
+
+.card:hover{
+    box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.25);
+    transform: translateY(-2px);
+}
+
+.card span{
+    font: var(--inner-title);
+    color: var(--green500);
+}
+
+.btnCallToAction{
+    background: var(--green100);
+    color: var(--green500);
+    padding: .625rem 1.25rem;
+    border-radius: 1.4rem;
+    text-decoration: underline;
+}

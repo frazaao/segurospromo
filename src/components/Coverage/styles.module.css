@@ -1,0 +1,30 @@
+.wrapper{
+    background: var(--gray200);
+    padding: 4rem 0 5rem;
+}
+
+.container{
+    max-width: 1000px;
+    margin: 4rem auto 5rem;
+    text-align: center;
+}
+
+.title{
+    display: block;
+    font: var(--title);
+    margin-bottom: 2rem;
+}
+
+.subtitle{
+    font: var(--subtitle);
+    margin-bottom: 3.75rem;
+}
+
+.cardContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    margin-bottom: 4rem;
+}

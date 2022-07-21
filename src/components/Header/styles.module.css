@@ -1,0 +1,63 @@
+.wrapper{
+    width: 100%;
+    background: var(--green600);
+    padding: 1.5rem;
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navigation, .areaCliente{
+    display: flex;
+    align-items: center;
+    gap: 2.375rem;
+    color: var(--white);
+    font: var(--nav-item);
+}
+
+.navigation li:hover{
+    filter: brightness(0.8);
+}
+
+.btnOutline{
+    border: 1px solid var(--yellow400);
+    padding: .5rem 1rem;
+    margin-right: -1rem;
+    border-radius: .25rem;
+    transition: var(--transition-short);
+}
+
+.btnOutline:hover{
+    filter: brightness(1);
+    background: var(--yellow400);
+    color: var(--gray900);
+}
+
+.areaCliente{
+    gap: .25rem;
+}
+
+.areaCliente a:hover{
+    filter: brightness(0.8);
+}
+
+.areaCliente:hover .arrowRight{
+    animation: 1s flutuateRight infinite ease-in-out;
+}
+
+@keyframes flutuateRight{
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(3px)
+    }
+    100%{
+        transform: translateX(0)
+    }
+}
