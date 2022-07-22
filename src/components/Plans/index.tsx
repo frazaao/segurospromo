@@ -3,8 +3,13 @@ import styles from "./styles.module.css";
 import Mockup from "../../public/images/Mockup.png";
 import LinkButton from "../LinkButton";
 import { useEffect, useState } from "react";
+import { ListProps } from "../../@types/landingPage";
 
-export default function Plans() {
+interface Props {
+  data: ListProps;
+}
+
+export default function Plans({data}: Props) {
 
   const [width, setWidth] = useState(0);
 
@@ -17,6 +22,7 @@ export default function Plans() {
       <div className={styles.container}>
         { width > 900 && 
           <Image
+            placeholder="blur"
             className={styles.mockup}
             src={Mockup}
             layout="intrinsic"
@@ -24,39 +30,28 @@ export default function Plans() {
           /> 
         }
         <section className={styles.rightSection}>
-          <span className={styles.title}>
-            Planos personalizados
-            <br />e sem burocracia
-          </span>
+          <span className={styles.title} dangerouslySetInnerHTML={{ __html: data.Title }}></span>
           <ul>
-            <li>
-              <strong>1.</strong>
-              <p>Informe seus dados</p>
-            </li>
-            <li>
-              <strong>2.</strong>
-              <p>Descubra o plano ideal para o seu perfil</p>
-            </li>
-            <li>
-              <strong>3.</strong>
-              <p>
-                Escolha sua forma de pagamento e contrate 100% online
-              </p>
-            </li>
+            { data.Steps.map((step, index) => {
+              return (
+                <li key={step.id}>
+                  <strong>{index + 1}.</strong>
+                  <p>{step.Title}</p>
+                </li>
+              )
+            }) }
           </ul>
-          <p className={styles.displayText}>
-            Pronto! Agora você e sua família têm todos <br /> os benefícios de
-            viver com segurança total
-          </p>
+          <p className={styles.displayText} dangerouslySetInnerHTML={{ __html: data.Description }}></p>
           { width < 900 && 
             <Image
+              placeholder="blur"
               className={styles.mockup}
               src={Mockup}
               layout="intrinsic"
               alt="Ilustrações de aplicativos no notebook e no smartphone"
             /> 
           }
-          <LinkButton href="#">Faça sua cotação</LinkButton>
+          <LinkButton variant={data.Button.Variant} href={data.Button.Link}>{data.Button.Label}</LinkButton>
         </section>
       </div>
     </section>

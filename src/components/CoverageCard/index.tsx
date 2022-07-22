@@ -20,7 +20,7 @@ export default function CoverageCard({
 }: Props) {
   return (
     <div className={styles.card} { ...props }>
-      <Image src={src} alt={alt} />
+      <Image src={src} alt={alt} width="62" height="48" />
       <span>{title}</span>
       <p>{description}</p>
       <a className={styles.btnCallToAction} href={href}>

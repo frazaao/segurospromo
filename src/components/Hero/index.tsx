@@ -1,11 +1,16 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { HeroProps } from "../../@types/landingPage";
 import BackgroundImage from "../../public/images/Hero.jpg";
 import BackgroundImageMobile from "../../public/images/HeroMobile.jpg";
 import LinkButton from "../LinkButton";
 import styles from "./styles.module.css";
 
-export default function Hero() {
+interface Props {
+  data: HeroProps;
+}
+
+export default function Hero({ data }: Props) {
   const [width, setWidth] = useState(0);
 
   useEffect(() => {
@@ -15,26 +20,22 @@ export default function Hero() {
   return (
     <section className={styles.wrapper}>
       <Image
+        placeholder="blur"
         sizes="100vw"
         src={width > 900 ? BackgroundImage : BackgroundImageMobile}
         alt="Uma família, um homem e uma mulher com seus filhos no campo"
       />
 
       <div className={styles.heroContent}>
-        <h1>
-          Tranquilidade para
-          <br />
-          viver mais
-        </h1>
+        <h1 dangerouslySetInnerHTML={{ __html: data.Title }}></h1>
 
         <div className={styles.heroDescription}>
-          <p>
-            Viva mais e melhor com os benefícios
-            <br />
-            que um serguro de vida te oferece
-          </p>
+          <p dangerouslySetInnerHTML={{ __html: data.Description }}></p>
+
           <div className={styles.linkButton}>
-            <LinkButton href="#">Faça sua cotação</LinkButton>
+            <LinkButton variant={data.Button.Variant} href={data.Button.Link}>
+              {data.Button.Label}
+            </LinkButton>
           </div>
         </div>
       </div>

@@ -1,38 +1,35 @@
 import CoverageCard from "../CoverageCard";
 import styles from "./styles.module.css";
-import Angel from "../../public/icons/Angel.svg";
 import LinkButton from "../LinkButton";
+import { CoverageProps } from "../../@types/landingPage";
 
-export default function Coverage() {
+interface Props {
+  data: CoverageProps;
+}
+
+export default function Coverage({ data }: Props) {
   return (
     <section className={styles.wrapper}>
       <div className={styles.container}>
-        <span className={styles.title}>Nossas coberturas</span>
-        <p className={styles.subtitle}>Veja mais detalhes de cada proteção!</p>
+        <span className={styles.title}>{data.Title}</span>
+        <p className={styles.subtitle}>{data.Subtitle}</p>
         <div className={styles.cardContainer}>
-          <CoverageCard
-            src={Angel}
-            alt="Ícone de anjo"
-            title="Morte"
-            description="Se você vier a faltar por causa de um acidente ou doença, a pessoa que você escolheu como beneficiário receberá o valor contratado."
-            href="#"
-          />
-          <CoverageCard 
-            src={Angel}
-            alt="Ícone de anjo"
-            title="Morte"
-            description="Se você vier a faltar por causa de um acidente ou doença, a pessoa que você escolheu como beneficiário receberá o valor contratado."
-            href="#"
-          />
-          <CoverageCard 
-            src={Angel}
-            alt="Ícone de anjo"
-            title="Morte"
-            description="Se você vier a faltar por causa de um acidente ou doença, a pessoa que você escolheu como beneficiário receberá o valor contratado."
-            href="#"
-          />
+          {data.CoverageCard.map((card, index) => {
+            return (
+              <CoverageCard
+                key={index}
+                src={`https://amopromo.herokuapp.com${card.Icon.data.attributes.url}`}
+                alt={card.Icon.data.attributes.alternativeText}
+                title={card.Title}
+                description={card.Description}
+                href={card.Description}
+              />
+            );
+          })}
         </div>
-        <LinkButton href="#">Faça sua cotação</LinkButton>
+        <LinkButton variant={data.Button.Variant} href={data.Button.Link}>
+          {data.Button.Label}
+        </LinkButton>
       </div>
     </section>
   );
