@@ -51,7 +51,7 @@ export const getStaticProps: GetStaticProps  = async () => {
 
   const { data } = await client.query({ query })
 
-  const { landingPage } = await data;
+  const { landingPage } = data;
 
   const landingPageData = landingPage.data.attributes;
 
