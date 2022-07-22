@@ -38,6 +38,18 @@
     color: var(--gray900);
 }
 
+.menuMobile{
+    display: none;
+    background: none;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    font: var(--text);
+    font-weight: bold;
+    color: var(--white);
+    letter-spacing: 1px;
+}
+
 .areaCliente{
     gap: .25rem;
 }
@@ -78,5 +90,60 @@
     .btnOutline{
         padding: .5rem;
         margin-right: -.25rem;
+    }
+}
+
+@media (max-width:900px){
+    .wrapper{
+        position: relative;
+        z-index:2;
+    }
+
+    .navigation, .areaCliente{
+        justify-content: center;
+        position: absolute;
+        top: -500px;
+        left: 0;
+        width: 100%;
+        height: fit-content;
+        background: var(--green600);
+        z-index:1;
+        gap: 2rem;
+        padding: 2rem;
+        overflow: hidden;
+        transition: var(--transition-short)
+    }
+
+    .navigation{
+        flex-direction: column;
+    }
+
+    .areaCliente, .navigation{
+        top: 100%;
+        max-height: 0;
+        padding: 0;
+    }
+
+    .menuMobile{
+        display: flex;
+    }
+
+    .menuMobile img{
+        transition: var(--transition-short);
+    }    
+
+    .menuMobile.active img{
+        transform: rotate(180deg);
+    }
+
+    .navigation.active{
+        max-height: fit-content;
+        padding: 2rem;
+        padding-top: 7rem;
+    }
+
+    .areaCliente.active{
+        max-height: 100%;
+        padding: 2rem;
     }
 }

@@ -3,42 +3,29 @@ import Accordion from "../Accordion";
 import Image from "next/image";
 import ReasonsImage from "../../public/images/Reasons.png";
 import LinkButton from "../LinkButton";
+import { AccordionItems } from "../../pages";
 
-export default function Reasons() {
+interface Props{
+  accordionItems: AccordionItems[]
+}
+
+export default function Reasons({ accordionItems }: Props) {
   return (
     <section className={styles.wrapper}>
       <div className={styles.container}>
         <span className={styles.title}>Mas por que ter um seguro de vida?</span>
         <div className={styles.content}>
           <div className={styles.leftSide}>
-            <Accordion
-              title="Custo-benefício"
-              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sollicitudin luctus malesuada. Curabitur vestibulum sagittis iaculis. Phasellus quis lobortis neque, mattis viverra augue. Etiam bibendum, sem vel faucibus finibus, ante dui finibus urna, sed gravida nisi lectus ac metus. Sed consequat lacinia nisl. Morbi in arcu risus. Phasellus pulvinar sed odio at scelerisque. Mauris."
-            />
 
-            <Accordion
-              title="Custo-benefício"
-              content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-              quaerat quis, necessitatibus repudiandae temporibus sed."
-            />
-
-            <Accordion
-              title="Custo-benefício"
-              content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-              quaerat quis, necessitatibus repudiandae temporibus sed."
-            />
-
-            <Accordion
-              title="Custo-benefício"
-              content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-              quaerat quis, necessitatibus repudiandae temporibus sed."
-            />
-
-            <Accordion
-              title="Custo-benefício"
-              content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-              quaerat quis, necessitatibus repudiandae temporibus sed."
-            />
+            {accordionItems.map((item, index) => {
+              return (
+                <Accordion
+                  key={index}
+                  title={item.title}
+                  content={item.text}
+                />
+              )
+            })}
           </div>
           <div className={styles.centerSide}>
             <LinkButton href="#">Faça sua cotação</LinkButton>

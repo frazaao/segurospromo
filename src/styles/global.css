@@ -57,3 +57,15 @@ a{
 li{
     list-style: none;
 }
+
+@media (max-width: 900px){
+
+    html{
+        font-size: 14px;
+    }
+
+    :root{
+        --font-hero: 700 2.5rem/1.25 'Poppins';
+        --title: 700 2rem/1.5 'Poppins';
+    }
+}

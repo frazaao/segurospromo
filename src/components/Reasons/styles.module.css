@@ -21,6 +21,7 @@
     gap: 10rem;
     position: relative;
     margin-bottom: 5rem;
+    padding-bottom: 3rem;
 }
 
 .centerSide{
@@ -60,11 +61,11 @@
     }
 
     .centerSide{
-        position: sticky;
+        position: unset;
         margin: 0 auto;
     }
 
     .rightSide{
-
+        order: -1;
     }
 }
