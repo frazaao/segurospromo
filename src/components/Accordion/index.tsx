@@ -1,7 +1,7 @@
 import styles from './styles.module.css'
 import Image from "next/image";
 
-import ChevronDown from "../../public/icons/ChevronDown.svg";
+import ChevronDown from "/public/icons/ChevronDown.svg";
 import { useState } from 'react';
 
 interface Props {

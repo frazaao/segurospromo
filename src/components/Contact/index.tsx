@@ -1,9 +1,9 @@
 import Image from "next/image";
 import styles from "./styles.module.css";
-import ContactImage from "../../public/images/Contact.jpg";
-import ContactImageMobile from "../../public/images/ContactMobile.jpg";
-import TelephoneIcon from "../../public/icons/Phone.svg";
-import WhatsAppIcon from "../../public/icons/WhatsAppStroke.svg";
+import ContactImage from "/public/images/Contact.webp";
+import ContactImageMobile from "/public/images/ContactMobile.webp";
+import TelephoneIcon from "/public/icons/Phone.svg";
+import WhatsAppIcon from "/public/icons/WhatsAppStroke.svg";
 import LinkButton from "../LinkButton";
 import { useState, useEffect } from "react";
 import { ContactProps } from "../../@types/landingPage";

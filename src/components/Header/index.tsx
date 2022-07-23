@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import styles from './styles.module.css';
-import Logo from '../../public/images/SegurosPromo.svg';
-import User from '../../public/icons/User.svg';
-import ArrowRight from '../../public/icons/ArrowRight.svg';
-import ArrowDown from '../../public/icons/ArrowDown.svg';
+import Logo from '/public/images/SegurosPromo.svg';
+import User from '/public/icons/User.svg';
+import ArrowRight from '/public/icons/ArrowRight.svg';
+import ArrowDown from '/public/icons/ArrowDown.svg';
 import { useState } from 'react';
 
 export default function Header() {

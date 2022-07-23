@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { HeroProps } from "../../@types/landingPage";
-import BackgroundImage from "../../public/images/Hero.jpg";
-import BackgroundImageMobile from "../../public/images/HeroMobile.jpg";
+import BackgroundImage from "/public/images/Hero.webp";
+import BackgroundImageMobile from "/public/images/HeroMobile.webp";
 import LinkButton from "../LinkButton";
 import styles from "./styles.module.css";
 

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./styles.module.css";
-import Mockup from "../../public/images/Mockup.png";
+import Mockup from "/public/images/Mockup.webp";
 import LinkButton from "../LinkButton";
 import { useEffect, useState } from "react";
 import { ListProps } from "../../@types/landingPage";

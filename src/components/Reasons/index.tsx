@@ -1,7 +1,7 @@
 import styles from "./styles.module.css";
 import Accordion from "../Accordion";
 import Image from "next/image";
-import ReasonsImage from "../../public/images/Reasons.png";
+import ReasonsImage from "/public/images/Reasons.webp";
 import LinkButton from "../LinkButton";
 import { AccordionItems } from "../../pages";
 import { ReasonsProps } from "../../@types/landingPage";

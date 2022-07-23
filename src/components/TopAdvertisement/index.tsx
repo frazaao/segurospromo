@@ -1,6 +1,6 @@
 import styles from './styles.module.css';
-import SmartphoneIcon from '../../public/icons/Smartphone.svg'
-import WhatsAppIcon from '../../public/icons/WhatsApp.svg'
+import SmartphoneIcon from '/public/icons/Smartphone.svg'
+import WhatsAppIcon from '/public/icons/WhatsApp.svg'
 import Image from 'next/image';
 
 export default function TopAdvertisement() {

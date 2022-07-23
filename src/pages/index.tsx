@@ -71,6 +71,7 @@ export const getStaticProps: GetStaticProps  = async () => {
     props: {
       accordionItems,
       landingPageData
-    }, 
+    },
+    revalidate: 60 * 60 * 24,
   }
 }
