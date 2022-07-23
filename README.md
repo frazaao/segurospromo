@@ -1,34 +1,54 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">
+    <img src="public/images/SegurosPromo.svg">
+</h1>
 
-## Getting Started
+# Seguros promo
+Comparamos as principais seguradoras de seguro viagem do Brasil, os melhores planos de seguro viagem e preços do mercado. Cobrimos qualquer oferta. Confira!
 
-First, run the development server:
+## 💡Case
+Seguros Promo é um website de comparativos das principais seguradores de viagem do Brasil, e o intuito do projeto é desenvolver uma Landing Page que demonstre um pouco mais da marca e de seus serviços, benefícios e vantagens.
 
-```bash
-npm run dev
-# or
+## 🛠️Tecnologias
+Este projeto foi desenvolvido utilizando as seguintes tecnologias:
+- [NextJS](https://nextjs.org/)
+- [ReactJS](https://reactjs.org/)
+- [Typescript](https://www.typescriptlang.org/)
+- [GraphQL](https://graphql.org/)
+- [ApolloClient](https://www.apollographql.com/)
+
+## 👀Observações
+Este projeto utiliza conceitos de geração de sites estáticos com ``Incremental Static Regeneration`` do **NextJS** utilizando ``getStaticProps`` e revalidá-los a cada 24 horas.
+
+Ele consome uma API para geração do conteúdo vinda do Strapi, você pode acessar o repositório do CMS a partir [deste link](https://github.com/frazaao/segurospromo_strapi).
+
+## 🚀Instalação
+
+Para executar este projeto é necessário que você já tenha a prévia instalação do [NodeJs](https://nodejs.org/).
+
+Para adicionar automaticamente as dependecias envolvidas, execute o seguinte script no console:
+
+```
+yarn
+```
+
+Para iniciar o projeto em seu servidor, execute o seguinte script no console:
+
+```
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Logo em seguida no seu console você irá visualizar as informações de seu projeto rodando no servidor, como esta:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```
+yarn run v1.22.10
+warning ..\..\..\package.json: No license field
+$ next dev
+ready - started server on 0.0.0.0:3000, url: http://localhost:3000
+```
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+Após isto basta entrar no navegador usando o endereço que o console te retornar em "url".
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Feito com ❤️ por Frazaao

@@ -18,7 +18,7 @@ export default function Coverage({ data }: Props) {
             return (
               <CoverageCard
                 key={index}
-                src={`https://amopromo.herokuapp.com${card.Icon.data.attributes.url}`}
+                src={card.Icon.data.attributes.url}
                 alt={card.Icon.data.attributes.alternativeText}
                 title={card.Title}
                 description={card.Description}
