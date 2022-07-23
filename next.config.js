@@ -6,7 +6,11 @@ const nextConfig = {
     images: {
       unoptimized: true
     }
-  }
+  },
+  i18n: {
+    locales: ["pt_BR"],
+    defaultLocale: "pt_BR",
+  },
 }
 
 module.exports = nextConfig

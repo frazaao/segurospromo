@@ -2,7 +2,7 @@ import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
   return (
-    <Html lang="pt_BR">
+    <Html>
       <Head>
         <meta name="description" content="Comparamos as principais seguradoras de seguro viagem do Brasil, os melhores planos de seguro viagem e preços do mercado. Cobrimos qualquer oferta. Confira!" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
