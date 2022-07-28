@@ -3,7 +3,7 @@ import styles from './styles.module.css';
 
 interface Props {
     href: string;
-    variant?: 'thin' | 'bold';
+    variant?: 'thin' | 'bold' | 'mediumRounded';
     children: ReactNode,
     className?: string;
 }
@@ -11,7 +11,7 @@ interface Props {
 export default function LinkButton({ href, children, variant = "bold", className, ...props }: Props){
     return (
         <a 
-            className={`${styles.linkButton} ${className} ${variant === 'bold' ? styles.fontBold : styles.fontThin}`} 
+            className={`${styles.linkButton} ${className} ${variant === 'bold' ? styles.fontBold : styles.fontThin} ${variant == 'mediumRounded' && styles.mediumRounded}`} 
             href={href} { ...props }
         >
             {children}

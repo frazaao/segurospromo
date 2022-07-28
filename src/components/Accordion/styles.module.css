@@ -32,3 +32,16 @@
     max-height: 500px;
     padding: 0 1rem 1rem 0;
 }
+
+.black span{
+    color: var(--gray800);
+    font: var(--nav-item);
+}
+
+.accordionItem.black{
+    border-bottom: 1px solid var(--gray800);
+}
+
+.black img{
+    filter: brightness(0);
+}

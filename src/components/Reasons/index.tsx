@@ -20,7 +20,7 @@ export default function Reasons({ accordionItems, data }: Props) {
           <div className={styles.leftSide}>
             {accordionItems.map((item, index) => {
               return (
-                <Accordion key={index} title={item.title} content={item.text} />
+                <Accordion key={index} title={item.title}>{item.text}</Accordion>
               );
             })}
           </div>

@@ -12,6 +12,8 @@ import Plans from '../components/Plans'
 import Reasons from '../components/Reasons'
 import TopAdvertisement from '../components/TopAdvertisement'
 import { LandingPageProps } from '../@types/landingPage';
+import SalesCenterMobile from '../components/SalesCenterMobile';
+import { useEffect, useState } from 'react';
 
 export interface AccordionItems{
   title: string,
@@ -24,6 +26,12 @@ interface Props {
 }
 
 function Home({ accordionItems, landingPageData }:Props){
+
+  const [width, setWidth] = useState(0);
+
+  useEffect(() => {
+    setWidth(window.innerWidth);
+  }, []);
 
   return (
     <>
@@ -38,6 +46,9 @@ function Home({ accordionItems, landingPageData }:Props){
       <Coverage data={landingPageData.Coverage} />
       <Reasons data={landingPageData.Reasons} accordionItems={accordionItems} />
       <Contact data={landingPageData.Contact} />
+      { width < 900 && (
+        <SalesCenterMobile />
+      ) }
     </>
   )
 }
