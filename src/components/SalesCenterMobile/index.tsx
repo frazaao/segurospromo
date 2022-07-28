@@ -5,16 +5,12 @@ import Accordion from "../Accordion";
 import styles from "./styles.module.css";
 
 import * as I from "./helper";
+import ColoredSeparator from "../ColoredSeparator";
 
 export default function SalesCenterMobile() {
   return (
     <>
-      <div className={styles.separator}>
-        <div className={styles.green100}></div>
-        <div className={styles.purple}></div>
-        <div className={styles.yellow}></div>
-        <div className={styles.green700}></div>
-      </div>
+    <ColoredSeparator />
       <section className={styles.container}>
         <Image src={SegurosPromo} alt="Logomarca Seguros Promo" />
         <div className={styles.socialNetworks}>
@@ -22,6 +18,7 @@ export default function SalesCenterMobile() {
           <a href="#"><Image src={I.Twitter} alt="Logo do Twitter" /></a>
           <a href="#"><Image src={I.Instagram} alt="Logo do Instagram" /></a>
         </div>
+        <hr />
         <div className={styles.contacts}>
           <span>Central de vendas:</span>
           <LinkButton variant="mediumRounded" href="#">

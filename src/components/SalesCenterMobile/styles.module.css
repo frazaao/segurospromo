@@ -12,6 +12,12 @@
     gap: 0.75rem;
 }
 
+.container hr{
+    width: 100%;
+    overflow: visible;
+    border-color: var(--green700);
+}
+
 .contacts{
     display: flex;
     flex-direction: column;
@@ -54,26 +60,4 @@
 .payment{
     padding-bottom: 1.675rem;
     border-bottom: 1px solid var(--green700);
-}
-
-.separator{
-    margin-top: 4.5rem;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr) ;
-}
-
-.separator .green100{
-    border-bottom: 4px solid #64BA00;
-}
-
-.separator .purple{
-    border-bottom: 4px solid #68629C;
-}
-
-.separator .yellow{
-    border-bottom: 4px solid #FFD012;
-}
-
-.separator .green700{
-    border-bottom: 4px solid #007E47;
 }
