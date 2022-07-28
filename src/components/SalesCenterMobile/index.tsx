@@ -4,7 +4,7 @@ import LinkButton from "../LinkButton";
 import Accordion from "../Accordion";
 import styles from "./styles.module.css";
 
-import * as I from "./hepler";
+import * as I from "./helper";
 
 export default function SalesCenterMobile() {
   return (
