@@ -18,9 +18,9 @@ export default function SalesCenterMobile() {
       <section className={styles.container}>
         <Image src={SegurosPromo} alt="Logomarca Seguros Promo" />
         <div className={styles.socialNetworks}>
-          <Image src={I.Facebook} alt="Logo do Facebook" />
-          <Image src={I.Twitter} alt="Logo do Twitter" />
-          <Image src={I.Instagram} alt="Logo do Instagram" />
+          <a href="#"><Image src={I.Facebook} alt="Logo do Facebook" /></a>
+          <a href="#"><Image src={I.Twitter} alt="Logo do Twitter" /></a>
+          <a href="#"><Image src={I.Instagram} alt="Logo do Instagram" /></a>
         </div>
         <div className={styles.contacts}>
           <span>Central de vendas:</span>
